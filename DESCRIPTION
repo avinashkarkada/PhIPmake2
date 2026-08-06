@@ -1,0 +1,30 @@
+Package: phipmake2
+Type: Package
+Title: Fast, Memory-Bounded PhIP-Seq Peptide and Protein Summarisation
+Version: 2.0.0
+Authors@R: person("Avinash", "Karkada", email = "avikarkada@gmail.com",
+                  role = c("aut", "cre"))
+Description: A rewrite of the Larman Lab 'phipmake' post-alignment stage.
+    Splits multi-library PhIP-Seq peptide matrices into sub-libraries, joins
+    peptide annotations, and collapses peptides to proteins by sum ('prosum'),
+    maximum ('promax') and independent-epitope count ('polyclonal'). Replaces
+    the original per-protein R loops with single grouped 'data.table' passes and
+    streams sub-library results to disk instead of holding whole-screen copies
+    in memory. Output file names and layout are drop-in compatible with
+    phipmake 0.2.8.
+License: GPL-3
+Encoding: UTF-8
+Depends:
+    R (>= 4.0)
+Imports:
+    data.table (>= 1.14.0),
+    igraph (>= 1.2.0),
+    stats,
+    tools,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+URL: https://github.com/avinashkarkada/PhIPmake2
+BugReports: https://github.com/avinashkarkada/PhIPmake2/issues
+Config/roxygen2/version: 8.1.0

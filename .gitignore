@@ -1,0 +1,30 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+.Rbuildignore.bak
+
+# Package build artefacts
+*.tar.gz
+*.Rcheck/
+src/*.o
+src/*.so
+src/*.dll
+
+# The cache phipmake2 no longer creates, ignored so stray v1 runs never land here
+.drake/
+.future/
+
+# Data: screens and metadata live on the cluster, never in the repo
+*.csv
+*.tsv
+*.fastq
+*.fastq.gz
+!tests/**/*.csv
+!tests/**/*.tsv
+
+# OS
+.DS_Store
+Thumbs.db
